@@ -1,0 +1,21 @@
+{block content}
+
+<h1 n:block="title">Articles</h1>
+
+<p><a n:href="add">Add new article</a></p>
+
+<table n:if="$articles" class="grid">
+	<tr>
+		<th>Title</th>
+		<th>Author</th>
+		<th>&nbsp;</th>
+	</tr>
+	<tr n:foreach="$articles as $article">
+		<td><a href="{$article->link}">{$article->title}</a></td>
+		<td n:if="$article->author">{$article->author}</td>
+		<td>
+			<a n:href="edit, $article->id">Edit</a>
+			<a n:href="delete, $article->id">Delete</a>
+		</td>
+	</tr>
+</table>

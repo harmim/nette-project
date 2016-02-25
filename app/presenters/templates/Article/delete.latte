@@ -1,0 +1,11 @@
+{block content}
+
+<h1 n:block="title">Delete Article</h1>
+
+{if $article}
+	<p>Are you sure that you want to delete ‘{$article->title}’{if $article->author} by ‘{$article->author}‘{/if}’?</p>
+	{control deleteForm}
+
+{else}
+	<p>Cannot find article.</p>
+{/if}

@@ -1,0 +1,9 @@
+{block content}
+
+<h1 n:block="title">Edit Article</h1>
+
+{if $article}
+	{control editForm}
+{else}
+	<p>Cannot find article.</p>
+{/if}

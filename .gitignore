@@ -1,0 +1,7 @@
+/.*
+/temp/*
+/log/*
+!.gitignore
+!.htaccess
+!.db
+composer.lock

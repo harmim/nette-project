@@ -1,0 +1,28 @@
+#
+# SECURITY WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# https://nette.org/security-warning
+#
+php:
+	date.timezone: Europe/Prague
+
+application:
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+parameters:
+	database:
+		host: localhost
+		dbname: nette-project
+		user: root
+		password:
+
+database:
+	dsn: "mysql:host=%database.host%;dbname=%database.dbname%"
+	user: %database.user%
+	password: %database.password%
+
+services:
+	authenticator: App\Model\Authenticator
+	articleService: App\Model\ArticleService
+	routerFactory: App\Router\RouterFactory
+	router: @routerFactory::createRouter

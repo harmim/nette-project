@@ -1,0 +1,15 @@
+{
+	"name": "harmim/nette-project",
+	"type": "project",
+	"description": "Example use Nette Framework",
+	"authors": [
+		{
+			"name": "Dominik Harmim",
+			"email": "harmim6@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.4",
+		"nette/nette": "~2.3.9"
+	}
+}

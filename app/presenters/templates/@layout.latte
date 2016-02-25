@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" charset="text/html; charset=utf-8">
+	<title>{ifset title}{include title|trim|striptags} | {/ifset}Nette example</title>
+	<link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+
+	<div id="content">
+		{include content}
+	</div>
+
+	<p n:if="$user->loggedIn" id="logged-in">Logged in as {$user->identity->firstName} {$user->identity->lastName}. <a n:href="User:logout">Log out</a></p>
+
+	<script src="/js/netteForms.js"></script>
+</body>
+</html>
